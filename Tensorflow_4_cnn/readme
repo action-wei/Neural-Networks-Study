@@ -1,0 +1,31 @@
+Goals
+
+The goal of this tutorial is to build a relatively small convolutional neural network (CNN) for recognizing images.
+In the process, this tutorial:
+    (1)Highlights a canonical organization for network architecture, training and evaluation.
+    (2)Provides a template for constructing larger and more sophisticated models.
+
+The reason CIFAR-10 was selected was that it is complex enough to exercise much of TensorFlow's ability to scale to large models.
+At the same time, the model is small enough to train fast, which is ideal for trying out new ideas and experimenting with new techniques.
+
+
+
+Highlights of the Tutorial
+
+The CIFAR-10 tutorial demonstrates several important constructs for designing larger and more sophisticated models in TensorFlow:
+
+Core mathematical components including convolution (wiki), rectified linear activations (wiki), max pooling (wiki) and local response normalization (Chapter 3.3 in AlexNet paper).
+Visualization of network activities during training, including input images, losses and distributions of activations and gradients.
+Routines for calculating the moving average of learned parameters and using these averages during evaluation to boost predictive performance.
+Implementation of a learning rate schedule that systematically decrements over time.
+Prefetching queues for input data to isolate the model from disk latency and expensive image pre-processing.
+We also provide a multi-GPU version of the model which demonstrates:
+
+Configuring a model to train across multiple GPU cards in parallel.
+Sharing and updating variables among multiple GPUs.
+We hope that this tutorial provides a launch point for building larger CNNs for vision tasks on TensorFlow.
+
+
+
+Detailed instructions on how to get started available at:
+http://tensorflow.org/tutorials/deep_cnn/
